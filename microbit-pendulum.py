@@ -1,4 +1,4 @@
-#project1: microbit pendulum
+#project1: microbit pendulum by Mo and Alyssa
 
 print("Part I: Simulation")
 
