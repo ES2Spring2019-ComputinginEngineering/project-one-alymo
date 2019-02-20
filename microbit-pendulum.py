@@ -2,30 +2,32 @@
 
 print("Part I: Simulation")
 
-import numpy
+import numpy as np
+import math
 
-def update_pendulum(ang_pos, ang_vel, ang_acc, atime1,time2):
+def update_pendulum(ang_pos, ang_vel, ang_acc, time1, time2):
     dt = time2-time1
     ang_vel_new = ang_vel+ang_acc*dt
     ang_pos_new = ang_pos+ang_vel*dt
-    ang_acc_new = 9.8*(pi/2-ang_pos_new)
+    ang_acc_new = 9.8*(math.pi/2-ang_pos_new)
     return ang_pos_new, ang_vel_new, ang_acc_new
 
-def print_pendulum(time,pos,vel):
+def print_pendulum(time, ang_pos, ang_vel, ang_acc):
     print("TIME:     ", time)
-    print("POSITION: ", pos)
-    print("VELOCITY: ", vel, "\n")
+    print("ANGULAR POSITION: ", ang_pos)
+    print("ANGULAR VELOCITY: ", ang_vel)
+    print("ANGULAR ACCELERATION: ", ang_acc, "\n")
 
-pos = [0]
-vel = [0]
-ang_acc = 9.8*(pi/2-ang_pos)
-time = numpy.linspace(0,20,201)
-print_pendulum(time[0],pos[0],vel[0])
+ang_pos = [0]
+ang_vel = [0]
+ang_acc = 9.8*(math.pi/2-ang_pos[0])
+time = np.linspace(0,20,201)
+print_pendulum(time[0], ang_pos[0], ang_vel[0], ang_acc)
 
 i = 1
 while i < len(time):
-    posNext, velNext = update_pendulum(acc[i],pos[i-1],vel[i-1],time[i-1],time[i])
-    pos.append(posNext)
-    vel.append(velNext)
-    print_pendulum(time[i],pos[i],vel[i])
+    ang_pos_new, ang_vel_new, ang_acc_new = update_pendulum(ang_pos[i-1], ang_vel[i-1], ang_acc, time[i-1], time[i])
+    ang_pos.append(ang_pos_new)
+    ang_vel.append(ang_vel_new)
+    print_pendulum(time[i],ang_pos[i],ang_vel[i], ang_acc)
     i += 1
