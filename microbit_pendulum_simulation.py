@@ -34,7 +34,7 @@ plt.figure(figsize = (4, 6))
 
 
 plt.subplot(3,1,1)
-plt.plot(time, ang_pos, 'r-') 
+plt.plot(time, ang_pos, 'y-') 
 plt.xlabel('Time (seconds)')
 plt.ylabel('Position (m)')
 plt.title('Position vs Time')
