@@ -12,7 +12,6 @@ with open(filename, "w") as file:
     while not microbit.button_b.is_pressed():
         acceleration_x = microbit.accelerometer.get_x()
         acceleration_y = microbit.accelerometer.get_y()
-        acceleration_z = microbit.accelerometer.get_z()
         microbit.display.show(microbit.Image.HAPPY)
         time = (microbit.running_time())/1000 - start_time
         values = str(acceleration_x) + "," + str(acceleration_y) + "," + str(acceleration_z) + "," + str(time) + "\n"
