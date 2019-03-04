@@ -28,22 +28,21 @@ y_noisy_filt_pks, _ = sig.find_peaks(y_noisy_filt)
 theta = np.arcsin(y_noisy_filt / g)
 
 #plotting y acceleration against time:
-plt.plot(time, y_noisy_filt,'r-')
+plt.subplot(2, 1, 1)
+plt.plot(t, y_noisy_filt,'r-')
 plt.xlabel('Time (seconds)')
 plt.ylabel('Y Acceleration (m/s^2)')
 plt.title('Y Acceleration vs Time Filtered')
-plt.xlim((0, 20))
 plt.grid()
 
 #plotting theta against time:
-plt.plot(time, theta,'b-')
+plt.subplot(2, 1, 2)
+plt.plot(t, theta,'b-')
 plt.title('Noisy Median Filtered')
 plt.xlabel('Time (seconds)')
 plt.ylabel('Theta(radians)')
 plt.title('Theta vs Time Filtered')
-plt.xlim((0, 20))
 plt.grid()
 
-#test plot:
-plt.plot(t, y_noisy_filt)
+plt.tight_layout()
 plt.show()
