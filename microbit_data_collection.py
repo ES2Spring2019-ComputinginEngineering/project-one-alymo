@@ -1,3 +1,7 @@
+#Step 3: Data Collection
+#Mo Liu and Alyssa Attonito
+#This section creates a program that allows the microbit to collect and store real-world pendulum data.
+
 import microbit, math, os, random
 
 #cwd = os.getcwd()

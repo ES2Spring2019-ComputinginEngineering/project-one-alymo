@@ -1,7 +1,12 @@
+#Step 1 and 2: Simulation
+#Mo Liu and Alyssa Attonito
+#This section creates a simulation that allows the user to visualize and analyze the simulated data. 
+
 import numpy as np
 import math
 import matplotlib.pyplot as plt
 
+#updates values with time:
 def update_pendulum(ang_pos, ang_vel, ang_acc, time1, time2):
     dt = time2-time1
     ang_vel_new = ang_vel+ang_acc*dt
@@ -9,18 +14,21 @@ def update_pendulum(ang_pos, ang_vel, ang_acc, time1, time2):
     ang_acc_new = 9.8*(math.pi/2-ang_pos_new)
     return ang_pos_new, ang_vel_new, ang_acc_new
 
+#prints values:
 def print_pendulum(time, ang_pos, ang_vel, ang_acc):
     print("TIME:     ", time)
     print("ANGULAR POSITION: ", ang_pos)
     print("ANGULAR VELOCITY: ", ang_vel)
     print("ANGULAR ACCELERATION: ", ang_acc, "\n")
 
+#initial values in lists:
 ang_pos = [0]
 ang_vel = [0]
 ang_acc = [9.8*(math.pi/2-ang_pos[0])]
 time = np.linspace(0,20,40000)
 print_pendulum(time[0], ang_pos[0], ang_vel[0], ang_acc)
 
+#iterating the update:
 i = 1
 while i < len(time):
     ang_pos_new, ang_vel_new, ang_acc_new = update_pendulum(ang_pos[i-1], ang_vel[i-1], ang_acc[i-1], time[i-1], time[i])
@@ -30,6 +38,7 @@ while i < len(time):
     i += 1
 
 
+#plotting simulation data:
 plt.figure(figsize = (4, 6))
 
 
