@@ -6,6 +6,7 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 
+#change l according to length of pendulum
 g = 9.81
 l = 0.50
 
@@ -28,7 +29,7 @@ def print_pendulum(time, ang_pos, ang_vel, ang_acc):
 ang_pos = [math.pi/2]
 ang_vel = [0]
 ang_acc = [0]
-time = np.linspace(0,20,100000)
+time = np.linspace(0,20,40000)
 print_pendulum(time[0], ang_pos[0], ang_vel[0], ang_acc)
 
 #iterating the update:
