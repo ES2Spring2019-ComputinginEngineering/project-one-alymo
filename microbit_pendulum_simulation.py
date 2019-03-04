@@ -6,12 +6,15 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 
+g = 9.81
+l = 0.50
+
 #updates values with time:
 def update_pendulum(ang_pos, ang_vel, ang_acc, time1, time2):
     dt = time2-time1
     ang_vel_new = ang_vel+ang_acc*dt
     ang_pos_new = ang_pos+ang_vel*dt
-    ang_acc_new = 9.8*(math.pi/2-ang_pos_new)
+    ang_acc_new = g/l*math.sin(ang_pos)
     return ang_pos_new, ang_vel_new, ang_acc_new
 
 #prints values:
@@ -22,10 +25,10 @@ def print_pendulum(time, ang_pos, ang_vel, ang_acc):
     print("ANGULAR ACCELERATION: ", ang_acc, "\n")
 
 #initial values in lists:
-ang_pos = [0]
+ang_pos = [math.pi/2]
 ang_vel = [0]
-ang_acc = [9.8*(math.pi/2-ang_pos[0])]
-time = np.linspace(0,20,40000)
+ang_acc = [0]
+time = np.linspace(0,20,100000)
 print_pendulum(time[0], ang_pos[0], ang_vel[0], ang_acc)
 
 #iterating the update:
