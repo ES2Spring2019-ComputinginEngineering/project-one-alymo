@@ -2,15 +2,16 @@
 #Mo Liu and Alyssa Attonito
 #This section creates a program that allows the microbit to collect and store real-world pendulum data.
 
-import microbit, math, os, random
-
 #cwd = os.getcwd()
+
+import microbit, math, os, random
 
 filename = "pendulum_data" + str(random.randint(1,999)) + ".txt"
 
 while not microbit.button_a.is_pressed():
     microbit.sleep(50)
 
+#this function creates a file on the microbit and stores acceleration in x and y directions and time data.
 with open(filename, "w") as file:
     start_time = (microbit.running_time())/1000
     while not microbit.button_b.is_pressed():
