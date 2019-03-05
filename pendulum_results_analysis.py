@@ -11,7 +11,7 @@ t = []
 g = 9.81
  
 #openning the data file and extracting the data:
-with open ("pendulum_data.txt", "r") as file:
+with open ("pendulum_data_23.5.txt", "r") as file:
     for line in file:
         line = line.rstrip().split(",")
         y_acceleration = float(line[1])
@@ -28,6 +28,7 @@ y_noisy_filt_pks, _ = sig.find_peaks(y_noisy_filt)
 
 #calculating theta from y acceleration:
 theta = np.arcsin(y_noisy_filt / g)
+theta_pks, _ = sig.find_peaks(theta)
 
 #plotting y acceleration against time:
 plt.subplot(2, 1, 1)
@@ -50,7 +51,7 @@ plt.tight_layout()
 plt.show()
 
 #Determining period by averaging time differences
-peaks = t[y_noisy_filt_pks]
+peaks = t[theta_pks]
 time_difference = np.diff(peaks)
 period = str(np.sum(time_difference)/len(time_difference))
 print("Period: " + period + "s")

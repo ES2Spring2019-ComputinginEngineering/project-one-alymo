@@ -8,7 +8,8 @@ import matplotlib.pyplot as plt
 
 #change l according to length of pendulum
 g = 9.81
-l = 0.50
+l = 0.5969
+
 
 #updates values with time:
 def update_pendulum(ang_pos, ang_vel, ang_acc, time1, time2):
@@ -85,8 +86,7 @@ plt.tight_layout()
 plt.show()
 
 #determining the period:
-peaks = time[ang_acc_peaks]
+peaks = time[ang_pos_peaks]
 time_difference = np.diff(peaks)
 period = str(np.sum(time_difference)/len(time_difference))
 print("Period: " + period + "s")
-
