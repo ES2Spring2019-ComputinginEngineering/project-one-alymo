@@ -31,7 +31,7 @@ theta = np.arcsin(y_noisy_filt / g)
 
 #plotting y acceleration against time:
 plt.subplot(2, 1, 1)
-plt.plot(t, y_noisy_filt,'r-', t[y_noisy_filt_pks], y_noisy_filt[y_noisy_filt_pks], 'b.')
+plt.plot(t, y_noisy_filt,'g-', t[y_noisy_filt_pks], y_noisy_filt[y_noisy_filt_pks], 'b.')
 plt.xlabel('Time (seconds)')
 plt.ylabel('Y Acceleration (m/s^2)')
 plt.title('Y Acceleration vs Time Filtered')
@@ -39,7 +39,7 @@ plt.grid()
 
 #plotting theta against time:
 plt.subplot(2, 1, 2)
-plt.plot(t, theta,'b-', t[y_noisy_filt_pks], theta[y_noisy_filt_pks], 'r.')
+plt.plot(t, theta,'b-', t[y_noisy_filt_pks], theta[y_noisy_filt_pks], 'g.')
 plt.title('Noisy Median Filtered')
 plt.xlabel('Time (seconds)')
 plt.ylabel('Theta(radians)')
