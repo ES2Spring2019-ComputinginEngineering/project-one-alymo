@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 #change l according to length of pendulum
 g = 9.81
-l = 0.5969
+l = 0.1206
 
 
 #updates values with time:
@@ -52,37 +52,32 @@ ang_pos_peaks, _ = sig.find_peaks(ang_pos)
 ang_vel_peaks, _ = sig.find_peaks(ang_vel)
 ang_acc_peaks, _ = sig.find_peaks(ang_acc)
 
-#plotting simulation data:
-plt.figure(figsize = (4, 6))
-
-
-plt.subplot(3,1,1)
+#plotting simulation data. peaks are shown as dots:
+plt.figure()
 plt.plot(time, ang_pos, 'g-', time[ang_pos_peaks], ang_pos[ang_pos_peaks], 'b.') 
 plt.xlabel('Time (seconds)')
-plt.ylabel('Position (m)')
-plt.title('Position vs Time')
+plt.ylabel('Angular Position (Radians)')
+plt.title('Angular Position vs Time')
 plt.xlim((0, 20)) 
 plt.grid()
+plt.show()
 
-
-plt.subplot(3,1,2)
+plt.figure()
 plt.plot(time, ang_vel, 'g-', time[ang_vel_peaks], ang_vel[ang_vel_peaks], 'b.')
 plt.xlabel('Time (seconds)')
-plt.ylabel('Velocity (m/s)')
-plt.title('Velocity vs Time')
+plt.ylabel('Angular Velocity (Radians/s)')
+plt.title('Angular Velocity vs Time')
 plt.xlim((0, 20)) 
 plt.grid()
+plt.show()
 
-
-plt.subplot(3,1,3)
+plt.figure()
 plt.plot(time, ang_acc, 'g-', time[ang_acc_peaks], ang_acc[ang_acc_peaks], 'b.')
 plt.xlabel('Time (seconds)')
-plt.ylabel('Acceleration (m/s^2)')
-plt.title('Acceleration vs Time')
+plt.ylabel('Angular Acceleration (Radians/s^2)')
+plt.title('Angular Acceleration vs Time')
 plt.xlim((0, 20)) 
 plt.grid()
-
-plt.tight_layout()
 plt.show()
 
 #determining the period:
