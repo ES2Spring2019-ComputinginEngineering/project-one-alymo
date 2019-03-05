@@ -13,8 +13,8 @@ Period_of_Pendulum= [1.000, 1.207,1.461, 1.683, 1.882] #last data point made up
 
 
 plt.plot(Length_of_Pendulum, Period_of_Pendulum)
-plt.xlabel('Pendulum Length')
-plt.ylabel('Pendulum Period')
+plt.xlabel('Log(Pendulum Length)')
+plt.ylabel('Log(Pendulum Period)')
 plt.yscale('log')
 plt.xscale('log')
 plt.title('Pendulum Length and Period for Simulation')
