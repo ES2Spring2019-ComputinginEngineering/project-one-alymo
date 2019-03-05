@@ -52,7 +52,7 @@ ang_pos_peaks, _ = sig.find_peaks(ang_pos)
 ang_vel_peaks, _ = sig.find_peaks(ang_vel)
 ang_acc_peaks, _ = sig.find_peaks(ang_acc)
 
-#plotting simulation data:
+#plotting simulation data. peaks are shown as dots:
 plt.figure(figsize = (4, 6))
 
 
