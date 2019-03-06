@@ -6,7 +6,8 @@
 1. Collect Real-World Data:
   Construct a pendulum and attach a micro:bit to the end. Flash the "1_microbit_data_collection.py" code to the microbit, disconnect the microbit, and push the reset button. Start the pendulum at a 90 degree angle. Pushing A will start the time and acceleration collection and B will stop data collection. After each trial (using a pendulum of a unique length), attach the microbit back to the computer and drag the file it has created on to the computer. Repeat five files times, each time saving the file with the length of the pendulum used. 
 
-2. Collect Simulation Data: MO :)
+2. Collect Simulation Data: 
+
 **Please refer to the piece of code used for each step and how to use it!
 **Dont forget special things the user must input to the code (do they need to change the file name, or input a new value into a variable, etc)
 
