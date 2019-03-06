@@ -1,10 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Mar  4 15:29:19 2019
+#Step 4: Plotting Pendulum Length and Period
+#Mo Liu and Alyssa Attonito
+#This section generates log-log graphs to showcase the difference between the simulation and real-world data.
 
-@author: alyssa
-"""
 
 import matplotlib.pyplot as plt
 

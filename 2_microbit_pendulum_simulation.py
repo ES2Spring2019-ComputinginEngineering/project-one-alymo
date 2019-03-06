@@ -1,4 +1,4 @@
-#Step 1 and 2: Simulation
+#Step 2: Simulation
 #Mo Liu and Alyssa Attonito
 #This section creates a simulation that allows the user to visualize and analyze the simulated data. 
 

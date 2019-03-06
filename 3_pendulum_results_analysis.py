@@ -1,4 +1,4 @@
-#Step 4: Analysis of Results
+#Step 3: Analysis of Results
 #Mo Liu and Alyssa Attonito
 #This section applies a filter to the raw data and plot acceleration and angular position against time. 
 

@@ -1,4 +1,4 @@
-#Step 3: Data Collection
+#Step 1: Data Collection
 #Mo Liu and Alyssa Attonito
 #This section creates a program that allows the microbit to collect and store real-world pendulum data.
 
