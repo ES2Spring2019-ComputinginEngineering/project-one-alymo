@@ -10,7 +10,7 @@ s = []
 t = []
 g = 9.81
  
-#openning the data file and extracting the data:
+#opening the data file and extracting the data:
 with open ("pendulum_data_4.75.txt", "r") as file:
     for line in file:
         line = line.rstrip().split(",")
@@ -55,7 +55,7 @@ time_difference = np.diff(peaks)
 period = str(np.sum(time_difference)/len(time_difference))
 print("Period: " + period + "s")
 
-#a sampel file for testing: pendulum_data_4.75.txt
+#a sample file for testing: pendulum_data_4.75.txt
 """0.008,1.056,0.0019989
 -0.02,1.032,0.0719986
 0.012,1.0,0.137999
