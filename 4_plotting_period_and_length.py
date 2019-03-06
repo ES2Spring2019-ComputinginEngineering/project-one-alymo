@@ -5,7 +5,7 @@
 
 import matplotlib.pyplot as plt
 
-#Note: These Numbers plot simulation data; need to be modified to graph other
+#Note: Input numbers here to graph in the plot
 Length_of_Pendulum= [0.12065, 0.2159, 0.3429, 0.4699, 0.5969] 
 Period_of_Pendulum= [0.6448, 0.6708,0.6210, 0.5008, 0.7255]
 

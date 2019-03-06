@@ -14,19 +14,4 @@
 3. Graph Real-World and Simulation Position and Acceleration Data: MO :)
 
 4. Plot Pendulum Period and Length:
-  To observe the relationship between a pendulum's length and its period, graph log(pendulum length) by log(pendulum period) using the "3_plotting_period_and_length.py" file. Input the various lengths of the pendulums used in each trial into the list called Length_of_Pendulum, and input the various periods that correspond to each length into the list called Period_of_Pendulum. When the program is run, it will generate a graph of log(pendulum length) by log(pendulum period), which will show the direct or indirect relationship between length and period of a pendulum.
-
-
-## How to format your readme
-
-In your readme, you can:
-```
-Give code examples
-```
-
-You can also include useful links, like this one with information about [formatting markdown](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
-
-You can
-- Also
-- Make
-- Lists
+  To observe the relationship between a pendulum's length and its period, graph log(pendulum length) by log(pendulum period) using the "4_plotting_period_and_length.py" file. Input the various lengths of the pendulums used in each trial into the list called Length_of_Pendulum, and input the various periods that correspond to each length into the list called Period_of_Pendulum. When the program is run, it will generate a graph of log(pendulum length) by log(pendulum period), which will show the direct or indirect relationship between length and period of a pendulum. You must input values for the real-world data into the list and run the code to get the first graph, and then input the simulation data over the old data into the same list and run it again. Looking at both these graphs will demonstrate the difference between real-world pendulum length and period data and simulated pendulum length and period data.
