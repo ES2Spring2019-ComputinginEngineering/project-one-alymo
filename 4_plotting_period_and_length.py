@@ -15,5 +15,5 @@ plt.xlabel('Log(Pendulum Length)')
 plt.ylabel('Log(Pendulum Period)')
 plt.yscale('log')
 plt.xscale('log')
-plt.title('Pendulum Length and Period for Simulation') #Note: change title as needed
+plt.title('Pendulum Length and Period') #Note: change title as needed
 plt.grid(True)
