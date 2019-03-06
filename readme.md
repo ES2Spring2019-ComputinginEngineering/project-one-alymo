@@ -7,11 +7,9 @@
   Construct a pendulum and attach a micro:bit to the end. Flash the "1_microbit_data_collection.py" code to the microbit, disconnect the microbit, and push the reset button. Start the pendulum at a 90 degree angle. Pushing A will start the time and acceleration collection and B will stop data collection. After each trial (using a pendulum of a unique length), attach the microbit back to the computer and drag the file it has created on to the computer. Repeat five files times, each time saving the file with the length of the pendulum used. 
 
 2. Collect Simulation Data: 
+  To observe simulation data at different pendulum length, change the variable l (units: meters) to the according length. The angular acceleration value, ang_acc, would obtain a certain value that is related to l. Consequently, the other two variables of concern, angular velocity (ang_vel) and angular position (ang_pos). In this simulation, an arbiturary angular position has been assignment (pi/2) as the initial value. The list is then appended using linspace, and the collection of simulation data was plotted in 3 graphs. Make sure to take note of the average period value returned in the end. 
 
-**Please refer to the piece of code used for each step and how to use it!
-**Dont forget special things the user must input to the code (do they need to change the file name, or input a new value into a variable, etc)
-
-3. Graph Real-World and Simulation Position and Acceleration Data: MO :)
+3. Graph Real-World and Simulation Position and Acceleration Data: 
 
 4. Plot Pendulum Period and Length:
   To observe the relationship between a pendulum's length and its period, graph log(pendulum length) by log(pendulum period) using the "4_plotting_period_and_length.py" file. Input the various lengths of the pendulums used in each trial into the list called Length_of_Pendulum, and input the various periods that correspond to each length into the list called Period_of_Pendulum. When the program is run, it will generate a graph of log(pendulum length) by log(pendulum period), which will show the direct or indirect relationship between length and period of a pendulum. You must input values for the real-world data into the list and run the code to get the first graph, and then input the simulation data over the old data into the same list and run it again. Looking at both these graphs will demonstrate the difference between real-world pendulum length and period data and simulated pendulum length and period data.
